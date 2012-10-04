@@ -1,0 +1,14 @@
+.bundle
+.DS_Store
+Rental_status.png
+Order_state.png
+Procfile
+log/
+tmp/
+doc/
+public/uploads/
+spec/uploads/
+coverage/
+db/sphinx/
+logfile
+latest.dump
