@@ -13,11 +13,11 @@ gem 'pg'
 gem 'geocoder'
 gem 'oa-oauth', '~> 0.3.2', :require => "omniauth/oauth"
 gem 'koala', '~> 1.3.0'
+gem 'thin'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'thin'
   gem 'factory_girl'
   gem 'database_cleaner'
   gem 'fuubar'
