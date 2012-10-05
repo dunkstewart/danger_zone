@@ -26,7 +26,19 @@ module Factors
     end
     
     def weight
-      5
+      4
+    end
+    
+    def name
+      'Driver Age and Gender'
+    end
+    
+    def why
+      'At all ages, males had higher per capita crash death rates than females in 2010. Males ages 20-24 and 85 and older had the highest rates of crash deaths.'
+    end
+    
+    def source
+      'http://www.iihs.org/research/fatality.aspx?topicName=OverviewofFatalityFacts#Ageandgender'
     end
     
   private
