@@ -1,6 +1,6 @@
 DangerZone::Application.routes.draw do
   root :to => "sessions#new"
-  resource :session, :choice, :forensic, :predictive, :score
+  resource :session, :choice, :forensic, :predictive, :score, :about
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

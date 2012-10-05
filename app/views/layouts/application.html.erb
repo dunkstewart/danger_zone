@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Danger Zone</title>
-    <!-- Bootstrap -->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-  <br>
-  <br>
-  <br>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
-	
-	
-  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
-    <script src="/bootstrap/js/bsa.js"></script>
+<head>
+<title>Danger Zone</title>
+<!-- Bootstrap -->
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/javascripts/underscore-min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
 
-  <!-- Navbar
+
+<body class="preview" data-spy="scroll" data-target=".subnav"
+	data-offset="80">
+	
+
+	<!-- Navbar
     ================================================== -->
- <div class="navbar navbar-fixed-top">
-   <div class="navbar-inner">
-     <div class="container">
-       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </a>
-       <a class="brand" href="/dangerzone/index.php">DangerZone</a>
-       <div class="nav-collapse" id="main-menu">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="/">DangerZone</a>
 
-       </div>
-     </div>
-   </div>
- </div>
+				<div class="nav-collapse" id="main-menu">
+					<ul class="nav">
+						<li><a class="nav" href="/about">About</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
  
  
  <%= yield %>

@@ -16,22 +16,20 @@
           <div class="control-group">
             <label class="control-label" for="select01">Age</label>
             <div class="controls">
-              <select id="select01">
-                <option>under 13</option>
-                <option>13 to 19</option>
-                <option>19 to 25</option>
-                <option>25 to 45</option>
-                <option>46 to 65</option>
-				<option>46 to 65</option>66+
+              <select name="age">
+                <% Factors::AgeGenderFactor::AGE_RISK.keys.each do |age| %>
+                <option value='<%=age%>'><%=age%></option>
+                <% end %>
               </select>
             </div>
           </div>
 		            <div class="control-group">
             <label class="control-label" for="select01">Sex</label>
             <div class="controls">
-              <select id="select01">
-                <option>Male</option>
-                <option>Female</option>
+              <select name="gender">
+                <% Factors::AgeGenderFactor::GENDERS.each do |gender| %>
+                <option value='<%=gender%>'><%=gender%></option>
+                <% end %>
               </select>
             </div>
           </div>
@@ -73,9 +71,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/application.js"></script>
-    <script src="../js/bootswatch.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
 
 
   </body>

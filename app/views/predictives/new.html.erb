@@ -1,3 +1,69 @@
+<script>
+function GeoResult(place) {
+  this.place = place;
+  
+  this.has_geometry = function() {
+    return this.place.geometry;
+  };
+  
+  this.latitude = function() {
+    return this.place.geometry.location.lat();
+  };
+
+  this.longitude = function() {
+    return this.place.geometry.location.lng();
+  };
+
+  this.suburb = function() {
+    var fields = ['locality', 'sublocality', 'administrative_area_level_3', 'administrative_area_level_2', 'colloquial_area'];
+    for (var i = 0; i < fields.length; i++) {
+      var entity = this.address_components_of_type(fields[i])[0] || this.address_components_no_type()[0];
+      if (entity) return entity.long_name;
+    }
+    return '';
+  };
+
+  this.state = function() {
+    var state = this.address_components_of_type('administrative_area_level_1')[0];
+    if (state) return state.short_name;
+    return '';
+  };
+
+  this.address_components_no_type = function() {
+    return _(this.place.address_components).select(function(c) { return c.types.length == 0 });
+  };
+
+  this.address_components_of_type = function(type) {
+    return _(this.place.address_components).select(function(c) { return _(c.types).include(type) });
+  };
+};
+
+$.fn.auto_address = function(opts) {
+  if (this.length == 0) return;
+  var address_field = this;
+  var form = this.closest('form');
+  
+  var autocomplete = new google.maps.places.Autocomplete(this[0], {  });
+
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+    var place = autocomplete.getPlace();
+    if (place) {
+      var result = new GeoResult(place);
+      if (result.has_geometry()) {
+        form.find('#' + address_field.attr('id') + '_latitude').val(result.latitude());
+        form.find('#' + address_field.attr('id') + '_longitude').val(result.longitude());
+        form.find('#' + address_field.attr('id') + '_state').val(result.state());
+      }
+    }
+  });
+};
+
+$(document).ready(function() {
+  $('#start_address').auto_address({});
+  $('#end_address').auto_address({});
+});
+</script>
+
     <div class="container">
 <!-- Forms
 ================================================== -->
@@ -14,7 +80,10 @@
           <div class="control-group">
             <label class="control-label" for="input01" >Origin</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="input01" placeholder="Enter address">
+              <input type="text" class="input-xlarge" id='start_address' name="start_address" placeholder="Enter address">
+              <input type="hidden" id='start_address_latitude' name='start_address_latitude' />
+              <input type="hidden" id='start_address_longitude' name='start_address_longitude' />
+              <input type="hidden" id='start_address_state' name='start_address_state' />
               <p class="help-block">Where you start...matters...</p>
             </div>
           </div>
@@ -22,7 +91,10 @@
 		  <div class="control-group">
             <label class="control-label" for="input01" placeholder="Enter address">Destination</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="input01" placeholder="Enter address">
+              <input type="text" class="input-xlarge" id='end_address' name="end_address" placeholder="Enter address">
+              <input type="hidden" id='end_address_latitude' name='end_address_latitude' />
+              <input type="hidden" id='end_address_longitude' name='end_address_longitude' />
+              <input type="hidden" id='end_address_state' name='end_address_state' />
               <p class="help-block">Will you make it?</p>
             </div>
           </div>

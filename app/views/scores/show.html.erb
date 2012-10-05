@@ -1,35 +1,65 @@
-    <div class="container">
-<!-- Forms
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div
+	class="container">
+	<!-- Forms
 ================================================== -->
-<section id="forms">
-  <div class="page-header">
-    <h1>Your Danger score is....</h1>
-  </div>
+	<section id="forms">
+		<div class="page-header">
+			<h1>Your Danger score is....</h1>
+		</div>
 
-   <div class="row">
-    <div class="span7 offset1">
-      <form class="form-horizontal well" action="page3_risks.php" method="POST">
-        <fieldset>
-          <legend>Rating: <data>Goose!</data></legend>
-		      <div class="span3 pull-left middle"><data><span style='font-size:200px'>77</span></data>
-			  </div>
-				<div class="span3 pull-right"><data><img src="/bootstrap/img/goose.jpg" class="img-rounded"></data>
-			  </div>
+		<div class="row">
+			<div class="span7">
+				<form class="form-horizontal well" action="page3_risks.php"
+					method="POST">
+					<legend>
+						Rating:
+						<data>Goose!</data>
+					</legend>
+					<div class="row">
+						<div class="span3 pull-left">
+							<data> <img src="/bootstrap/img/goose.jpg"
+								class="img-rounded"></data>
+						</div>
+						<div class="span3 pull-right">
+							<span style='font-size: 200px;'>77</span>
+							<p>You're mad, bad and dangerous to know. You're a goose...</p>
+							<a href="about.php"><img src="/bootstrap/img/danger_engine_logo.png"
+								class="img-rounded" ></a>
 
-        </fieldset>
-      </form>
-    </div>
- </div>
+							<div class="fb-like" data-href="http://www.dangerengine.com"
+								data-send="true" data-width="200" data-show-faces="true"></div>
+						</div>
+					</div>
+				</form>
+				</div>
+			<div class="span3">
 
- <div class="row">
-<form class="form-horizontal well" action="page3_risks.php" method="POST">
-        <fieldset>
-          <legend>Risk: <data>Age</data></legend>
-		   Salience: <data>Important</data><br>
-		    Value: <data>Risky!</data><br>
-			Why?: <data>NOw I will tell you why this is a risky activity. Here is some text...</data><br>
-			
-			Source: <data><a href="<data>URL</data>">URL</a></data>	     
-        </fieldset>
-      </form>
-	  </div>
+  <div class="row">
+   <div class="span7 offset1">
+ <form class="form-horizontal well" action="page3_risks.php" method="POST">
+         <fieldset>
+           <legend>Risk: <data>Driver Age</data>
+ 		  <span class="label label-important pull-right">Very Important</span>
+ 		  <span class="label label-success pull-right">Low Risk</span>
+ 		  </legend>
+
+ 			Why?: <data>Now I will tell you why this is a risky activity. Here is some text...</data>
+
+ 			<span class="pull-right">Source: <data><a href="<datahttp://www.iihs.org/research/fatality.aspx?topicName=OverviewofFatalityFacts#Seatbeltuse</data>">http://www.iihs.org/research/fatality.aspx?topicName=OverviewofFatalityFacts#Seatbeltuse</a></data></span>	     
+         </fieldset>
+       </form>
+ 	  </div>
+ 	  </div>
+ 	  
+ 		</div>
+		<div
+	</div>

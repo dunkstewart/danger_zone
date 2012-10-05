@@ -1,32 +1,40 @@
-    <div class="container">
+<div class="container">
 <!-- Forms
 ================================================== -->
 <section id="forms">
-  <div class="page-header">
-    <h1>Forensic</h1>
-  </div>
+<div class="page-header">
+<h1>Forensic</h1>
+</div>
 
-   <div class="row">
-    <div class="span7 offset1">
-      <form class="form-horizontal well" action="/forensic" method="POST">
-        <fieldset>
-          <legend>Grab your trip from your Car.....</legend>
-          <div class="control-group">
-            <label class="control-label" for="multiSelect">Multicon-select</label>
-            <div class="controls">
-              <select multiple="multiple" id="multiSelect">
-                <option>Trip 1</option>
-				<option>Trip 2</option>
-				<option>Trip 3</option>
-				<option>Trip 4</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Calculate my Danger Score</button>
-            <button type="reset" class="btn">Cancel</button>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-  </div>
+<div class="row">
+<div class="span7 offset1">
+  <form class="form-horizontal well" action="/forensic" method="POST">
+    <fieldset>
+      <legend>Grab your trip from your Car.....</legend>
+      <div class="control-group">
+        <label class="control-label" for="select01">Trip ID</label>
+        <div class="controls">
+          <select id="vehicle_vin">
+            <option value="DwightSchrute/TestTrace8">DwightSchrute/TestTrace8</option>
+		<option value="MattMiller/XABBBCCC">MattMiller/XABBBCCC</option>
+		<option value="DwightSchrute/TestTrace5">DwightSchrute/TestTrace5</option>
+		<option value="DwightSchrute/TestTrace7">DwightSchrute/TestTrace7</option>
+		<option value="DwightSchrute/TestTrace3">DwightSchrute/TestTrace3</option>
+		<option value="Michael/MichaelTestTrace">Michael/MichaelTestTrace</option>
+		<option value="Michael/ForTestTrace">Michael/ForTestTrace</option>
+		<option value="Michael/ForTestTrace1">Michael/ForTestTrace1</option>
+		<option value="Michael/FordFiesta1">Michael/FordFiesta1</option>
+		<option value="Michael/FordFiesta4">Michael/FordFiesta4</option>
+		<option value="DwightSchrute/1HGFA15699L501685">DwightSchrute/1HGFA15699L501685</option>
+		<option value="MattMiller/1zvbp8cf8c5216895">MattMiller/1zvbp8cf8c5216895</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Calculate my Danger Score</button>
+        <button type="reset" class="btn">Cancel</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+</div>
