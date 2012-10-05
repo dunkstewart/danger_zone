@@ -1,0 +1,43 @@
+<?php
+
+include_once ("includes/header.php");
+?>
+
+
+    <div class="container">
+<!-- Forms
+================================================== -->
+<section id="forms">
+  <div class="page-header">
+    <h1>Forensic</h1>
+  </div>
+
+   <div class="row">
+    <div class="span7 offset1">
+      <form class="form-horizontal well" action="page3_risks.php" method="POST">
+        <fieldset>
+          <legend>Grab your trip from your Car.....</legend>
+          <div class="control-group">
+            <label class="control-label" for="multiSelect">Multicon-select</label>
+            <div class="controls">
+              <select multiple="multiple" id="multiSelect">
+                <option>Trip 1</option>
+				<option>Trip 2</option>
+				<option>Trip 3</option>
+				<option>Trip 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Calculate my Danger Score</button>
+            <button type="reset" class="btn">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+<?php
+
+include_once ("includes/footer.php");
+?>

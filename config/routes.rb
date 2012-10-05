@@ -1,6 +1,6 @@
 DangerZone::Application.routes.draw do
   root :to => "home#index"
-  resources :home
+  resources :home, :choice, :forensic, :predictive, :score
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

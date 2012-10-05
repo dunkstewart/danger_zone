@@ -1,1 +1,92 @@
-<h1>Hello</h1>
+<?php
+
+include_once ("includes/header.php");
+?>
+
+
+    <div class="container">
+
+
+<!-- Forms
+================================================== -->
+<section id="forms">
+  <div class="page-header">
+    <h1>Enter the highway......</h1>
+  </div>
+
+  <div class="row">
+    <div class="span7 offset1">
+      <form class="form-horizontal well" action="page1.php" method="POST">
+        <fieldset>
+          <legend>Enter the Danger Zone......</legend>
+          <div class="control-group">
+            <label class="control-label" for="select01">Age</label>
+            <div class="controls">
+              <select id="select01">
+                <option>under 13</option>
+                <option>13 to 19</option>
+                <option>19 to 25</option>
+                <option>25 to 45</option>
+                <option>46 to 65</option>
+				<option>46 to 65</option>66+
+              </select>
+            </div>
+          </div>
+		            <div class="control-group">
+            <label class="control-label" for="select01">Sex</label>
+            <div class="controls">
+              <select id="select01">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+          </div>
+		            <div class="control-group">
+            <label class="control-label" for="select01">Are you drunk?</label>
+            <div class="controls">
+              <select id="select01">
+                <option>No</option>
+                <option>Yes</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">I want more danger!</button>
+            <button type="reset" class="btn">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  
+</section>
+
+</section>
+
+<br><br><br><br>
+
+     <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+      </footer>
+
+    </div><!-- /container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/application.js"></script>
+    <script src="../js/bootswatch.js"></script>
+
+
+  </body>
+</html>
+
+<?php
+include_once ("includes/footer.php");
+?>

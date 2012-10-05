@@ -1,0 +1,79 @@
+<?php
+
+include_once ("includes/header.php");
+?>
+
+
+    <div class="container">
+<!-- Forms
+================================================== -->
+<section id="forms">
+  <div class="page-header">
+    <h1>...Forensic or Predictive?</h1>
+  </div>
+
+   <div class="row">
+    <div class="span7 offset1">
+      <form class="form-horizontal well" action="page3_risks.php" method="POST">
+        <fieldset>
+          <legend>Tell us about your trip......</legend>
+          <div class="control-group">
+            <label class="control-label" for="input01" >Origin</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01" placeholder="Enter address">
+              <p class="help-block">Where you start...matters...</p>
+            </div>
+          </div>
+		  
+		  <div class="control-group">
+            <label class="control-label" for="input01" placeholder="Enter address">Destination</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01" placeholder="Enter address">
+              <p class="help-block">Will you make it?</p>
+            </div>
+          </div>
+		  
+		            <div class="control-group">
+            <label class="control-label" for="select01">Time you'll leave?</label>
+            <div class="controls">
+              <select id="select01">
+                <option>8am</option>
+				<option>9am</option>
+				<option>10am</option>
+				<option>11am</option>
+				<option>Noon</option>
+				<option>1pm</option>
+				<option>2pm</option>
+				<option>3pm</option>
+				<option>4pm</option>
+				<option>5pm</option>
+				<option>6pm</option>
+				<option>7pm</option>
+				<option>8pm</option>
+				<option>9pm</option>
+				<option>10pm</option>
+				<option>11pm</option>
+				<option>Midnight</option>
+				<option>1am</option>
+				<option>2am</option>
+				<option>3am</option>
+				<option>4am</option>
+				<option>5am</option>
+				<option>6am</option>
+				<option>7am</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Calculate my Danger Score</button>
+            <button type="reset" class="btn">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+<?php
+
+include_once ("includes/footer.php");
+?>
