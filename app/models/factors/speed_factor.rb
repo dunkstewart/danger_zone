@@ -1,7 +1,6 @@
 module Factors
   class SpeedFactor < ForensicBase
     def score
-      puts "**************#{risk}   #{scale}"
       risk * scale
     end
     
