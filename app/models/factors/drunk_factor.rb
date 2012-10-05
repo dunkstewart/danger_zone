@@ -1,7 +1,7 @@
 module Factors
   class DrunkFactor < Base
     def score
-      drunk == 'Yes' ? 100 : 0
+      drunk == 'Yes' ? 100 : 20
     end
     
     def weight
