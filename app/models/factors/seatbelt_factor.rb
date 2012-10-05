@@ -3,7 +3,7 @@ require 'net/http'
 module Factors
   class SeatbeltFactor < ForensicBase
     def score
-      seatbelt_on ? 0 : 100
+      seatbelt_on ? 50 : 100
     end
     
     def weight
