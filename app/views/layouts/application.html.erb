@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>DangerZone</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+  <head>
+    <title>Danger Zone</title>
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+  <br>
+  <br>
+  <br>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+	
+	
+  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+    <script src="/bootstrap/js/bsa.js"></script>
 
-<%= yield %>
+  <!-- Navbar
+    ================================================== -->
+ <div class="navbar navbar-fixed-top">
+   <div class="navbar-inner">
+     <div class="container">
+       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </a>
+       <a class="brand" href="/dangerzone/index.php">DangerZone</a>
+       <div class="nav-collapse" id="main-menu">
 
-</body>
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+ 
+ <%= yield %>
+ 
+  </body>
 </html>

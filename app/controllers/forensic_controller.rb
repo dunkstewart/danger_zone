@@ -1,3 +1,0 @@
-class ForensicController < ApplicationController
-  
-end

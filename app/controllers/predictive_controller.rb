@@ -1,3 +1,0 @@
-class PredictiveController < ApplicationController
-  
-end
