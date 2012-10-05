@@ -6,6 +6,7 @@ class ScoresController < ApplicationController
     
     if request.referrer.include? 'forensic/new'
       @engine.factors << Factors::SeatbeltFactor.new(session[:payload])
+      @engine.factors << Factors::WiperFactor.new(session[:payload])
     end
   end
 end
