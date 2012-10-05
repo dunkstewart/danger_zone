@@ -11,7 +11,7 @@ module Factors
     end
     
     def name
-      "Light in day: #{lights_on}"
+      "Lights #{lights_on ? 'on' : 'off'} in the daytime"
     end
     
     def why

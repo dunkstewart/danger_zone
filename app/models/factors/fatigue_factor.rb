@@ -9,7 +9,7 @@ module Factors
     end
     
     def name
-      "Week Hour: #{get_trip_length}h"
+      "Trip time: #{get_trip_length}h"
     end
     
     def why

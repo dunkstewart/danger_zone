@@ -11,7 +11,7 @@ module Factors
     end
     
     def name
-      "Seatbelt: #{seatbelt_on}"
+      "Seatbelt #{seatbelt_on ? 'buckled' : 'unbuckled'}"
     end
     
     def why

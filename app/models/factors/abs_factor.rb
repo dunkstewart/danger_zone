@@ -11,7 +11,7 @@ module Factors
     end
     
     def name
-      "ABS Triggered: #{abs_triggered}"
+      "ABS #{abs_triggered ? 'is' : 'not'} Triggered"
     end
     
     def why

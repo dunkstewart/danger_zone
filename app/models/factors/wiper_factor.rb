@@ -11,7 +11,7 @@ module Factors
     end
     
     def name
-      "Wiper: #{wiper_on}"
+      "Wipers #{wiper_on ? 'on' : 'off'}"
     end
     
     def why

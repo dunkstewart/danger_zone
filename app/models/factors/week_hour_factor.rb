@@ -9,7 +9,7 @@ module Factors
     end
     
     def name
-      "Week Hour: #{get_hour}h"
+      "Hour of the week: #{get_hour}h"
     end
     
     def why
