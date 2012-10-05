@@ -11,7 +11,7 @@ module Factors
     end
     
     def name
-      'Seatbelt'
+      "Seatbelt: #{seatbelt_on}"
     end
     
     def why
@@ -23,9 +23,10 @@ module Factors
     end
     
     def seatbelt_on
+      return @seatbelt if @seatbelt
       uri = URI('http://www.busbender.com/dangerzone/tools/trip_data.php?car=Michael/FordFiesta4&function=get_seatbelt_on_during_trip')
       json = JSON.parse(Net::HTTP.get(uri))
-      json['value']
+      @seatbelt = json['value']
     end
   end
 end

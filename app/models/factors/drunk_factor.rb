@@ -9,7 +9,7 @@ module Factors
     end
     
     def name
-      'Drunk'
+      "Drunk: #{drunk}"
     end
     
     def why
