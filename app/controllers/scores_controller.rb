@@ -12,6 +12,7 @@ class ScoresController < ApplicationController
       @engine.factors << Factors::AbsFactor.new(session[:payload])
       @engine.factors << Factors::SpeedFactor.new(session[:payload])
       @engine.factors << Factors::WeekHourFactor.new(session[:payload])
+      @engine.factors << Factors::FatigueFactor.new(session[:payload])
     end
   end
 end

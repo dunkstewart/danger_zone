@@ -5,7 +5,7 @@ module Factors
     end
     
     def weight
-      3
+      1
     end
     
     def name
