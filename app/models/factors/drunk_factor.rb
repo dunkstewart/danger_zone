@@ -9,7 +9,7 @@ module Factors
     end
     
     def name
-      drunk ? 'Drunk' : 'Sober'
+      drunk == 'Yes' ? 'Drunk' : 'Sober'
     end
     
     def why
