@@ -42,9 +42,9 @@
 				</div>
 			<div class="span3">
 
-  <% @engine.factors.sort.each do |factor| %>
+  <% @engine.factors.sort.reverse.each do |factor| %>
   <div class="row">
-   <div class="span7 offset1">
+   <div class="span7">
  <form class="form-horizontal well" action="/" method="POST">
          <fieldset>
            <legend>Risk: <%= factor.name %>
@@ -56,6 +56,7 @@
 
       <p>Source: <a href="<%= factor.source %>">More information</a>
  			
+ 			<div style='text-align:right;font-size:8px'>Contribution: <%= factor.weighted_score.to_i %></div>
          </fieldset>
        </form>
  	  </div>

@@ -5,7 +5,7 @@ module Factors
     end
     
     def weight
-      4
+      drunk == 'Yes' ? 5 : 1
     end
     
     def name
