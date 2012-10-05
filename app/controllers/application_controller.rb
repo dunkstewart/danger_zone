@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_filter :check_session
   
   def check_session
-    puts "***************#{session[:session].andand.inspect}"
-    redirect_to root_path unless session[:session] || request.path == '/' || request.path == '/session'
+    puts "***************#{session[:payload].andand.inspect}"
+    redirect_to root_path unless session[:payload] || request.path == '/' || request.path == '/session'
   end
 end
