@@ -14,8 +14,8 @@ class DangerEngine
   
   def rating
     case score
-    when 0..20 then 'Tom'
-    when 21..40 then 'Val'
+    when 0..20 then 'Maverick'
+    when 21..40 then 'Iceman'
     when 41..60 then 'Jester'
     when 61..80 then 'Kelly'
     else 'Goose'

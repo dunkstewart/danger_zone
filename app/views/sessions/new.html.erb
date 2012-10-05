@@ -18,7 +18,7 @@
             <div class="controls">
               <select name="age">
                 <% Factors::AgeGenderFactor::AGE_RISK.keys.each do |age| %>
-                <option value='<%=age%>'><%=age%></option>
+                <option <%= age == '20 to 24' ? 'selected="selected"' : '' %> value='<%=age%>'><%=age%></option>
                 <% end %>
               </select>
             </div>

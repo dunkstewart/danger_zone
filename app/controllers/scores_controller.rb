@@ -3,6 +3,7 @@ class ScoresController < ApplicationController
     @engine = DangerEngine.new
     @engine.factors << Factors::AgeGenderFactor.new(session[:payload])
     @engine.factors << Factors::DrunkFactor.new(session[:payload])
+    @engine.factors << Factors::StateFactor.new(session[:payload]) if session[:payload]['start_address_state'].present?
     
     if request.referrer.include? 'forensic/new'
       @engine.factors << Factors::SeatbeltFactor.new(session[:payload])

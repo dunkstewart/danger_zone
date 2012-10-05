@@ -13,11 +13,11 @@ module Factors
     end
     
     def why
-      'It helps you keep in your seat'
+      'One in three people will be involved in an alcohol-related crash in their lifetime.'
     end
     
     def source
-      ''
+      'http://www-fars.nhtsa.dot.gov/States/StatesAlcohol.aspx'
     end
   end
 end

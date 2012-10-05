@@ -30,7 +30,7 @@ module Factors
     end
     
     def name
-      'Driver Age and Gender'
+      "#{gender} #{age}"
     end
     
     def why

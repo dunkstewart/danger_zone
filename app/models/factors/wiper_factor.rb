@@ -1,7 +1,7 @@
 require 'net/http'
 
 module Factors
-  class WiperFactor < Base
+  class WiperFactor < ForensicBase
     def score
       wiper_on ? 100 : 0
     end
@@ -24,7 +24,7 @@ module Factors
     
     def wiper_on
       return @seatbelt if @seatbelt
-      uri = URI('http://www.busbender.com/dangerzone/tools/trip_data.php?car=Michael/FordFiesta4&function=get_windshield_wiper_on')
+      uri = URI(method_url('get_windshield_wiper_on'))
       json = JSON.parse(Net::HTTP.get(uri))
       @seatbelt = json['value']
     end

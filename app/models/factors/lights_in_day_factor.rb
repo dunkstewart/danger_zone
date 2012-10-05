@@ -1,7 +1,7 @@
 require 'net/http'
 
 module Factors
-  class LightsInDayFactor < Base
+  class LightsInDayFactor < ForensicBase
     def score
       lights_in_day ? 0 : 100
     end
@@ -24,7 +24,7 @@ module Factors
     
     def lights_on
       return @seatbelt if @seatbelt
-      uri = URI('http://www.busbender.com/dangerzone/tools/trip_data.php?car=Michael/FordFiesta4&function=get_lights_on_during_day')
+      uri = URI(method_url('get_lights_on_during_day'))
       json = JSON.parse(Net::HTTP.get(uri))
       @seatbelt = json['value']
     end
